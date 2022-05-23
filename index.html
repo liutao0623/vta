@@ -25,6 +25,14 @@
 				spaceBetween: 30
 			});
 			// console.log($, '----------------  ----------------Tom');
+			$(window).scroll(function () {
+				if ($(document).scrollTop() <= 30) {
+					$('.operation').css('background', 'transparent')
+				}
+				if ($(document).scrollTop() >= 40) {
+					$('.operation').css('background', 'white')
+				}
+			});
 		}
 		function open_list() {
 			$(".vta_listPopupWindow").toggle();
@@ -105,8 +113,9 @@
 		// 客服弹窗
 		$(function () {
 			$('.vta_kefu ').click(function () {
-				$('body').css({
-					"overflow": "hidden"
+				// $('html,body').addClass('ovfHiden'); //使网页不可滚动
+				$('.popup_addLayerMask,.vta_kefu_popup').bind("touchmove", function (e) {
+					e.preventDefault();
 				});
 				$('.vta_kefu_popup').show();
 				$('.popup_addLayerMask').show();
@@ -114,9 +123,7 @@
 		});
 		$(function () {
 			$('.shutDownPopup ').click(function () {
-				$('body').css({
-					"overflow": "auto"
-				});
+				// $('html,body').removeClass('ovfHiden');
 				$('.vta_kefu_popup').hide();
 				$('.popup_addLayerMask').hide();
 
@@ -130,6 +137,11 @@
 
 		a {
 			text-decoration: none;
+		}
+
+		.ovfHiden {
+			overflow: hidden;
+			height: 100%;
 		}
 
 		.white {
@@ -151,7 +163,7 @@
 			width: 7.5rem;
 			background: #FFFFFF;
 			font-size: .3rem;
-			z-index: 999;
+			z-index: 9999;
 			display: none;
 		}
 
@@ -234,7 +246,14 @@
 		}
 
 		.operation {
-			padding: .27rem .27rem;
+			padding: .3rem;
+			position: fixed;
+			width: 6.9rem;
+			z-index: 9999;
+		}
+
+		.operation_mask {
+			padding: .3rem;
 		}
 
 		.top_logo {}
@@ -1012,7 +1031,7 @@
 		</div>
 		<!-- 列表弹窗 -->
 		<div class="vta_listPopupWindow">
-			<div class="operation flex flex-between flex-middle">
+			<div class="operation_mask flex flex-between flex-middle">
 				<div class="top_logo">
 					<img src="./img/vta_logo.png" alt="">
 				</div>
