@@ -592,6 +592,7 @@ a {
 .newsInformation_content_box {
     position: absolute;
     width: 22.5rem;
+    overflow: hidden;
 }
 
 .newsInformation_cotent {
@@ -599,6 +600,7 @@ a {
     width: 6.72rem;
     margin: .3rem auto;
     background: #FFFFFF;
+    overflow: hidden;
     border-radius: 8px 8px 8px 8px;
     float: left;
 }
@@ -751,7 +753,7 @@ a {
     width: 7.50rem;
     height: 0px;
     opacity: 1;
-    border: 1px solid #323C47;
+    border: 0.5px solid #323C47;
     margin: .2rem auto;
 }
 
