@@ -216,3 +216,10 @@ input,
 select {
     vertical-align: middle;
 }
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: '';
+    clear: both;
+}

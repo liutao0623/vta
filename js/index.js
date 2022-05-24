@@ -78,13 +78,15 @@ $(function () {
         for (let index = 0; index < array.length; index++) {
             const element = array[index];
             if ($(this).parent().attr('data-index') == index) {
-                $('#' + $(this).attr('title')).show(1000);
                 $(this).parent().addClass("swich_btn_item_active");
             } else {
                 $(element).removeClass("swich_btn_item_active")
-                $('#' + $(element).find('a').attr('title')).hide();
             }
         }
+        var _index = $(this).parent().attr('data-index')
+        $('.newsInformation_content_box').animate({
+            left: -_index * $('#news_tab1').width()
+        }, 300)
     })
 });
 //版本 tab切换事件
@@ -95,20 +97,19 @@ $(function () {
         for (let index = 0; index < array.length; index++) {
             const element = array[index];
             if ($(this).parent().attr('data-index') == index) {
-                $('#' + $(this).attr('title')).show(1000);
+                // $('#' + $(this).attr('title')).show(1000);
                 $(this).parent().addClass("swich_btn_item_active");
             } else {
                 $(element).removeClass("swich_btn_item_active")
-                $('#' + $(element).find('a').attr('title')).hide();
+                // $('#' + $(element).find('a').attr('title')).hide();
             }
         }
-
-        // $('#version_tabs li').removeClass("swich_btn_item_active");
-        // $("#version_content div").removeClass("version_show");
-        // $(this).parent().addClass("swich_btn_item_active");
-        // $('#' + $(this).attr('title')).addClass('version_show');
+        var _index = $(this).parent().attr('data-index')
+        $('.version_content_box').animate({
+            left: -_index * $('#version_tab1').width()
+        }, 300)
     })
-});
+})
 // 客服弹窗
 $(function () {
     $('.vta_kefu ').click(function () {
