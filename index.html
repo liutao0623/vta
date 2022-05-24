@@ -78,7 +78,7 @@
 					<img src="./img/vta_close.png" alt="" onclick="open_list()">
 				</div>
 			</div>
-			<div class="list_item flex flex-between">
+			<div class="list_item flex flex-between" data-index="0">
 				<span>支持应用</span>
 				<img src="./img/down_black.png" alt="">
 			</div>
@@ -88,7 +88,7 @@
 				<a href="#"> 联系我们</a>
 				<a href="#"> 微塔研究院</a>
 			</div>
-			<div class="list_item flex flex-between">
+			<div class="list_item flex flex-between" data-index="1">
 				<div>解决方案</div>
 				<img src="./img/down_black.png" alt="">
 			</div>
@@ -98,7 +98,7 @@
 				<a href="#"> 联系我们</a>
 				<a href="#"> 微塔研究院</a>
 			</div>
-			<div class="list_item flex flex-between">
+			<div class="list_item flex flex-between" data-index="2">
 				<div>版本权益</div>
 				<img src="./img/down_black.png" alt="">
 			</div>
@@ -108,7 +108,7 @@
 				<a href="#"> 联系我们</a>
 				<a href="#"> 微塔研究院</a>
 			</div>
-			<div class="list_item flex flex-between">
+			<div class="list_item flex flex-between" data-index="3">
 				<span>客户案例</span>
 				<img src=" ./img/down_black.png" alt="">
 			</div>
@@ -118,7 +118,7 @@
 				<a href="#"> 联系我们</a>
 				<a href="#"> 微塔研究院</a>
 			</div>
-			<div class="list_item flex flex-between">
+			<div class="list_item flex flex-between" data-index="4">
 				<span>关于微塔</span>
 				<img src=" ./img/down_black.png" alt="">
 			</div>
@@ -157,7 +157,7 @@
 		<div class="vta_boutiqueApplication_box">
 			<p class="vta_columnTitle">精品应用</p>
 			<text class="vta_columnTitle_s">丰富的行业应用和完整的应用生态</text>
-			<div class="application_content flex flex-wrap flex-around">
+			<div class="application_content flex flex-wrap flex-between">
 				<div class="application_item">
 					<img src="./img/operatingSystem.png" alt="">
 					<div class="application_title">微云二手车运营版</div>
@@ -179,7 +179,29 @@
 					<p>为用户提供免费表情包</p>
 				</div>
 			</div>
-			<div class="toViewMore flex flex-middle flex-center">
+			<div class="application_content flex flex-wrap flex-between" id="application_content" style="display: none">
+				<div class="application_item">
+					<img src="./img/operatingSystem.png" alt="">
+					<div class="application_title">微云二手车运营版</div>
+					<p>为用户提供免费表情包</p>
+				</div>
+				<div class="application_item">
+					<img src="./img/microAssistant.png" alt="">
+					<div class="application_title">51水务通</div>
+					<p>为用户提供免费表情包</p>
+				</div>
+				<div class="application_item">
+					<img src="./img/waterFlux.png" alt="">
+					<div class="application_title">壹佰企微助手</div>
+					<p>为用户提供免费表情包</p>
+				</div>
+				<div class="application_item">
+					<img src="./img/vote.png" alt="">
+					<div class="application_title">壹佰门店V3投票</div>
+					<p>为用户提供免费表情包</p>
+				</div>
+			</div>
+			<div class="toViewMore flex flex-middle flex-center" data-flag="0">
 				<text>查看更多</text>
 				<img src="./img/down_white.png" alt="">
 			</div>
@@ -289,19 +311,18 @@
 		<div class="vta_versionTheRightsInterestsContrast_box">
 			<p class="vta_columnTitle">版本权益对比</p>
 			<text class="vta_columnTitle_s">丰富的行业应用和完整的应用生态</text>
-			<ul class="switch_btn flex flex-around" id="version_tabs">
-				<li class="swich_btn_item swich_btn_item_active">
+			<ul class="switch_btn flex flex-between" id="version_tabs">
+				<li class="swich_btn_item swich_btn_item_active" data-index="0">
 					<a href="#" title="version_tab1">免费版</a>
 				</li>
-				<li class="swich_btn_item">
+				<li class="swich_btn_item" data-index="1">
 					<a href="#" title="version_tab2">商业版</a>
 				</li>
-				<li class="swich_btn_item">
+				<li class="swich_btn_item" data-index="2">
 					<a href="#" title="version_tab3">定制版</a>
 				</li>
 			</ul>
 			<div id="version_content">
-
 				<div class="versionTheRightsInterestsContrast_content version_show" id="version_tab1">
 					<div class="versionTheRightsInterestsContrast_top version_bg1 flex flex-between flex-middle">
 						<div class="vrc_tip flex flex-column">
@@ -647,14 +668,14 @@
 		<!-- 精品应用 -->
 		<div class="vta_newsInformation_box">
 			<p class="vta_columnTitle newsTitle">新闻资讯</p>
-			<ul class="switch_btn flex flex-around" id="newsInformation_tabs">
-				<li class="swich_btn_item swich_btn_item_active">
+			<ul class="switch_btn flex flex-between" id="newsInformation_tabs">
+				<li class="swich_btn_item swich_btn_item_active" data-index="0">
 					<a href="#" title="news_tab1">微塔动态</a>
 				</li>
-				<li class="swich_btn_item">
+				<li class="swich_btn_item" data-index="1">
 					<a href="#" title="news_tab2">行业动态</a>
 				</li>
-				<li class="swich_btn_item">
+				<li class="swich_btn_item" data-index="2">
 					<a href="#" title="news_tab3">最新活动</a>
 				</li>
 			</ul>
@@ -664,7 +685,7 @@
 						微塔动态<text>I 智慧商业服务商</text>
 					</div>
 					<div class="newsInformation_item flex flex-between">
-						<div class="text-more">鞋服商家私域用户但是撒多撒多大萨达撒大声地达1.5亿</div>
+						<div class="text-more" style="width:75%">鞋服商家私域用户但是撒多撒多大萨达撒大声地达1.5亿</div>
 						<text selectable="false" space="false" decode="false">
 							01-17
 						</text>
